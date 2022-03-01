@@ -1,0 +1,5 @@
+# Project exclude paths
+/netty-demo-1-00/target/
+/.idea
+/logs
+/netty-study.iml
