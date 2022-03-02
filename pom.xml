@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>netty-demo-1-00</module>
+    <module>netty-action-01</module>
   </modules>
   <properties>
     <netty_version>4.1.36.Final</netty_version>
