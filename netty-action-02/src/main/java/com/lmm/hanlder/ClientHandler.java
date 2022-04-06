@@ -16,6 +16,7 @@ public class ClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
   @Override
   public void channelActive(ChannelHandlerContext ctx) throws Exception {
     //当被通知的channel是活跃的时候，发送一条消息
+    log.error("======链接建立=====");
     ctx.writeAndFlush(Unpooled.copiedBuffer("hello ，我是客户端", CharsetUtil.UTF_8));
   }
 
@@ -24,6 +25,7 @@ public class ClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
   protected void channelRead0(ChannelHandlerContext channelHandlerContext, ByteBuf in)
       throws Exception {
     //接收服务端发送来的消息
+    log.error("收到服务器的消息");
     log.error("client received:{}", in.toString(CharsetUtil.UTF_8));
   }
 

@@ -17,6 +17,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
   @Override
   public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
     ByteBuf in = (ByteBuf) msg;
+    log.error("收到客户端的消息");
     //打印接收到的消息
     log.error("Server received:{}",in.toString(CharsetUtil.UTF_8));
     //将接收到的消息写给发送者，而不冲刷出站消息
