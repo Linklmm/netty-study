@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/class-diagram
+interface Channel
+interface Comparable
+interface AttributeMap
+interface ServerChannel
+interface ChannelPipeline
+interface ChannelConfig
+abstract class AbstractChannel
+
+Comparable <|-- Channel
+AttributeMap <|-- Channel
+
+Channel <|- ServerChannel
+Channel <|- AbstractChannel
+ChannelPipeline *.. Channel
+ChannelConfig *.. Channel
+@enduml
