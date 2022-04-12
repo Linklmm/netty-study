@@ -13,7 +13,6 @@
     <module>netty-action-01</module>
     <module>netty-demo-1-01</module>
     <module>netty-action-02</module>
-    <module>netty-action-o2-server</module>
     <module>netty-action-04</module>
   </modules>
   <properties>
@@ -52,6 +51,13 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>${slf4j.version}</version>
+    </dependency>
+
+    <!-- 添加junit4依赖 -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
     </dependency>
 
 
