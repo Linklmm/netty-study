@@ -14,6 +14,7 @@
     <module>netty-demo-1-01</module>
     <module>netty-action-02</module>
     <module>netty-action-04</module>
+    <module>netty-action-05</module>
   </modules>
   <properties>
     <netty_version>4.1.36.Final</netty_version>
