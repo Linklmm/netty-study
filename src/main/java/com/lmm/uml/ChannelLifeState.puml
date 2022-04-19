@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/state-diagram
+[*] --> ChannelState
+
+state ChannelState {
+  [*] --> ChannelRegistered
+  ChannelRegistered --> ChannelActive
+  ChannelActive --> ChannelInactive
+  ChannelInactive --> ChannelUnregistered
+  ChannelUnregistered --> [*]
+}
+@enduml

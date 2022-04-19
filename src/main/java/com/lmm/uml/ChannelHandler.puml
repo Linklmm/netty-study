@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface ChannelHandler
+interface ChannelInboundHandler
+interface ChannelOutboundHandler
+abstract class ChannelHandlerAdapter
+class ChannelInboundHandlerAdapter
+class ChannelOutboundHandlerAdapter
+
+ChannelHandler <|-- ChannelInboundHandler
+ChannelHandler <|-- ChannelOutboundHandler
+ChannelHandler <|-- ChannelHandlerAdapter
+ChannelHandlerAdapter <|-- ChannelInboundHandlerAdapter
+ChannelHandlerAdapter <|-- ChannelOutboundHandlerAdapter
+ChannelInboundHandler <|-- ChannelInboundHandlerAdapter
+ChannelOutboundHandler <|-- ChannelOutboundHandlerAdapter
+
+@enduml
