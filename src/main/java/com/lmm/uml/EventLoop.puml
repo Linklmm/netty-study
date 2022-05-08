@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/class-diagram
+package "java.util.concurrent" #DDDDDD {
+interface Executor
+interface ExecutorService
+interface ScheduledExecutorService
+abstract Class AbstractExecutorService
+  Executor <|-- ExecutorService
+  ExecutorService <|-- ScheduledExecutorService
+  ExecutorService <|.. AbstractExecutorService
+}
+
+package "io.netty.util.concurrent" {
+interface EventExecutorGroup
+interface EventExecutor
+abstract AbstractEventExecutor
+abstract SingleThreadEventExecutor
+AbstractExecutorService <|-- EventExecutorGroup
+ScheduledExecutorService <|-- EventExecutorGroup
+EventExecutorGroup <|-- EventExecutor
+EventExecutor <|.. AbstractEventExecutor
+AbstractEventExecutor <|-- SingleThreadEventExecutor
+}
+
+package "io.netty.channel"{
+interface EventLoopGroup
+interface EventLoop
+abstract SingleThreadEventLoop
+Class ThreadPerChannelEventLoop
+EventExecutorGroup <|-- EventLoopGroup
+EventLoopGroup <|-- EventLoop
+EventLoop <|-- SingleThreadEventLoop
+SingleThreadEventExecutor <|-- SingleThreadEventLoop
+SingleThreadEventLoop <|-- ThreadPerChannelEventLoop
+}
+@enduml

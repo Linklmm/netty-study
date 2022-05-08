@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractBootStrap
+class BootStrap
+class ServerBootStrap
+interface Cloneable
+Cloneable <|-- AbstractBootStrap
+AbstractBootStrap <|-- BootStrap
+AbstractBootStrap <|-- ServerBootStrap
+
+@enduml

@@ -21,7 +21,6 @@ public class TestByteBuf {
   @Test
   public void testSlice() {
 
-    //ByteBuf buf = Unpooled.copiedBuffer("netty in Action rocks!", utf8);
     log.error("init buf:{},buf:{}", buf.toString(utf8), buf);
     //共享源实例
     ByteBuf sliced = buf.slice(0, 5);
@@ -45,7 +44,6 @@ public class TestByteBuf {
 
   @Test
   public void testCopy() {
-    //ByteBuf buf = Unpooled.copiedBuffer("netty in action", utf8);
     ByteBuf copy = buf.copy(0, 15);
     log.error("========init========");
     log.error("buf.toString:{},buf:{}", buf.toString(utf8), buf);
