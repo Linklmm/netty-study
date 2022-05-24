@@ -19,6 +19,7 @@
     <module>netty-action-07</module>
     <module>netty-action-08</module>
     <module>netty-action-09</module>
+    <module>netty-action-10</module>
   </modules>
   <properties>
     <netty_version>4.1.36.Final</netty_version>
